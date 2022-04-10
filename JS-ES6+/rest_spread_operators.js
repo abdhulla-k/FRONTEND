@@ -6,6 +6,9 @@ expands iterables into individual elements.*/
 
 // for instance of rest operator
 
+console.log( '==================rest operator==================' )
+
+
 function res( a, b, ...c ){
     console.log( `'a is: ' ${a} ', b is: ' ${b} 'and c is: ' ${c}` )
     for ( i of c ){
@@ -15,9 +18,30 @@ function res( a, b, ...c ){
 
 res( 'potato', 'tomato', 'banana', 'jackfruit', 'orange', 'apple' )
 
+///////////////////////////////////////
+// rest operator
 
-console.log( ' ======================================== ' )
+function add( num ) {
+    console.log( arguments )  // use argument
+}
 
+add( 1, 2, 3, 4, 5 )
+
+
+console.log('============================================')
+
+
+function add1( ...num ){
+    console.log( num )
+}
+
+add1( 1, 2, 3, 4, 5 )
+
+/////////////////////////////
+
+console.log( ' ==============spread operator================= ' )
+
+// incase of spread operator
 
 
 function spr( a, b, c, d, e, f ){
@@ -43,3 +67,31 @@ function spr3( a ){
 const c = {'country' : 'India', 'state': 'Kerala'}
 let a = {'name': 'abdhu', ...c}
 spr3( a )
+
+////////////////////////////////////
+
+
+let ar = [1, 2, 3, 4, 5, 7]
+let kr = [...ar]
+
+console.log(kr)
+
+kr.push( true )
+console.log(kr)
+
+
+console.log('============================================')
+
+
+let ab = {
+    Name : 'abdhu',
+    place : 'omy'
+}
+let bb = {
+    ...ab
+}
+
+console.log( bb )
+bb.Name = 'basheer'
+console.log( bb )
+console.log( ab )
