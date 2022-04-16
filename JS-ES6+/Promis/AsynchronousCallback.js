@@ -30,9 +30,9 @@ var button1 = document.getElementById( "mybutton" )
 button1.onclick = () => {
     console.log('started click event')   // it will work first 
     $.ajax({
-        url:'https://fcctop100.herokuapp.com/api/fccusers/top/alltime', // js will mark hear and go ahead.
+        url:'https://jsonplaceholder.typicode.com/todos/1', // js will mark hear and go ahead.
         sucsess: (data) => {                          // js would be aware about the success message
-            console.log(data)
+            console.log(data);
         }
     })
     console.log('completed click event') // it will work second
