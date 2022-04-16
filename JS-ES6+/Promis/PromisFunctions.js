@@ -78,3 +78,19 @@ getJso3( 'https://jsonplaceholder.typicode.com/todos/1' )
 .then(( data ) => {
     console.log( data )
 })
+
+
+/////////////////////////////////////
+// promis.all()
+// this function can get an aray of promises and solv all
+
+// eg.
+
+Promise.all([
+    'https://jsonplaceholder.typicode.com/todos/1',
+    'https://jsonplaceholder.typicode.com/todos/2',
+    'https://jsonplaceholder.typicode.com/todos/3'
+]).then(( data ) => {
+    console.log('from Proms.alla')
+    console.log(data)
+})
