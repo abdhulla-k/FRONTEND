@@ -91,6 +91,19 @@ Promise.all([
     'https://jsonplaceholder.typicode.com/todos/2',
     'https://jsonplaceholder.typicode.com/todos/3'
 ]).then(( data ) => {
-    console.log('from Proms.alla')
+    console.log('from Proms.all')
+    console.log(data)
+})
+
+//////////////////////////////
+// promis.rase function
+
+Promise.race([
+    'https://jsonplaceholder.typicode.com/todos/1',
+    'https://jsonplaceholder.typicode.com/todos/2',
+    'https://jsonplaceholder.typicode.com/todos/3'
+])
+.then(( data ) => {
+    console.log('from race function')
     console.log(data)
 })
