@@ -41,4 +41,40 @@ function getJso2( url ) {
     })
 }
 
+getJso2( 'https://jsonplaceholder.typicode.com/todos/1' )
+.then(( data ) => {
+    console.log( data )
+    return getJso2( 'https://jsonplaceholder.typicode.com/todos/2' )
+})
+.then(( data ) => {
+    console.log( data )
+})
 
+
+//////////////////
+// promis.reject
+// it is using to reject a data.
+
+const cach2 = {
+    name : 'abdhu'
+}
+
+function getJso3( url ) {
+
+    if (cach) {
+        return Promise.reject(cach2)  // it will reject cach2
+    }
+    return fetch( url )
+    .then(( data ) => {
+        return data.json()
+    })
+}
+
+getJso3( 'https://jsonplaceholder.typicode.com/todos/1' )
+.then(( data ) => {
+    console.log( data )
+    return getJso3( 'https://jsonplaceholder.typicode.com/todos/2' )
+})
+.then(( data ) => {
+    console.log( data )
+})
