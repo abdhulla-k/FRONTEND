@@ -3,7 +3,7 @@ let first_name = 'abdhulla'
 let second_name = 'K'
 const example = `${'myname age ' + age} 
 ${ 'my name is ' + first_name}`
-let example2 = `${first_name} ${second_name}`
+let example2 = `${first_name} ${second_name}` // template literal
 
 
 // print
